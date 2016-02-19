@@ -60,6 +60,11 @@ char* char_flip(char* str){
 int main(int argc, char* argv[])
 {
     char* str = argv[1];
+
+    char* idk = char_double("hello world");
+
+    printf(idk);
+    
     return 0;
 }
 
