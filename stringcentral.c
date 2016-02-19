@@ -41,7 +41,22 @@ char* char_double(char* str){
 // So, for let's say the string Bye you get BCyzef
 
 char* char_shift(char* str){
-    return str; 
+    char* ptr = (char*)malloc(sizeof(80));
+    char* new_str = ptr;
+    while (*str != '\0'){
+        // Copy character into the new array
+        *new_str = *str;
+        // Advance the new array by 1
+        new_str++;
+        // Copy again
+        *new_str = *str + 1;
+        // Advance the new array again
+        new_str++;
+        // Advance str
+        str++;
+        }
+    return new_str;
+     
 }
 
 //will make a small letter a capital letter and vice versa
