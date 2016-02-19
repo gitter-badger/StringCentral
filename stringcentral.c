@@ -73,18 +73,21 @@ char* char_flip(char* str){
     return str;
 }
 
-int main(int argc, char* argv[])
-{
-    //char* str = argv[1];
-
-    char* idk = "hello world";
-
-    printf("%s", char_double(idk));
-    
+int string_central (char*(*ptr[])(char*), char* str){
+    while (*ptr != '\0'){
+        printf("%s", *ptr(str));
+        ptr++;
     return 0;
 }
 
-char** string_central (char* (*ptr[])(char*), char* str){
-
+int main(int argc, char* argv[])
+{
+    //char* ptr = (char*)malloc(sizeof(80));
+    //char* idk = "hello world";
+    //printf("%s", char_double(idk));
+    //return 0;
+    char* str = argv[1];
+    char*(*ptr[])(char*) = {*char_nochange, NULL};
+    string_central(ptr, str);
+    return 0;
 }
-
