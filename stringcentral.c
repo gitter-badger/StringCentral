@@ -11,6 +11,8 @@
 char* char_double(char* str);
 char* char_shift(char* str);
 char* char_flip(char* str);
+// definition of ptr
+char* ptr = (char*)malloc(sizeof(80));
 
 // Will create a string where each of the characters is doubled so that the result string is twice the size of the input string
 // Make sure to provide enough space when calling malloc().
@@ -21,7 +23,6 @@ char* char_nochange(char* str){
 }
 
 char* char_double(char* str){
-    char* ptr = (char*)malloc(sizeof(80));
     char* new_str = ptr;
     while (*str != '\0'){
         // Copy character into the new array
