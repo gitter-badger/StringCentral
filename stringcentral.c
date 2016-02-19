@@ -9,7 +9,7 @@
 #include <stdlib.h>
 
 // definition of ptr
-char* ptr = (char*)malloc(sizeof(80));
+
 
 // Will create a string where each of the characters is doubled so that the result string is twice the size of the input string
 // Make sure to provide enough space when calling malloc().
@@ -20,6 +20,7 @@ char* char_nochange(char* str){
 }
 
 char* char_double(char* str){
+    char* ptr = (char*)malloc(sizeof(80));
     char* new_str = ptr;
     while (*str != '\0'){
         // Copy character into the new array
@@ -31,7 +32,7 @@ char* char_double(char* str){
         // Advance the new array again
         new_str++;
         // Advance str
-        *str = *str + 1;
+        str++;
         }
     return new_str;
 }
@@ -59,11 +60,11 @@ char* char_flip(char* str){
 
 int main(int argc, char* argv[])
 {
-    char* str = argv[1];
+    //char* str = argv[1];
 
-    char* idk = char_double("hello world");
+    char* idk = "hello world";
 
-    printf(idk);
+    printf("%s", char_double(idk));
     
     return 0;
 }
