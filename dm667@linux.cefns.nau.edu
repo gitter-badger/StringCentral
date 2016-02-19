@@ -28,6 +28,8 @@ char* char_double(char* str){
 // So, for let's say the string Bye you get BCyzef
 
 char* char_shift(char* str){
+    ch = str[100];
+    int j = 0; 
     return str; 
 }
 
