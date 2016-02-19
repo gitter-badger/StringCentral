@@ -6,7 +6,7 @@
 -----------------------------------------------*/
 
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 char* char_double(char* str);
 char* char_shift(char* str);
@@ -21,7 +21,21 @@ char* char_nochange(char* str){
 }
 
 char* char_double(char* str){
-    return str;
+    char* ptr = (char*)malloc(sizeof(80));
+    char* new_str = ptr;
+    while (*str != '\0'){
+        // Copy character into the new array
+        *new_str = *str;
+        // Advance the new array by 1
+        new_str++;
+        // Copy again
+        *new_str = *str;
+        // Advance the new array again
+        new_str++;
+        // Advance str
+        *str = *str + 1;
+        }
+    return new_str;
 }
 
 // Will kind of double the string like above, but each second character is the successor of the preceeding character in the ASCII table.
