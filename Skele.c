@@ -2,7 +2,7 @@
 | Central string program
 | CS480 - HW2
 | By: Austin Abhari
-|     David Starr
+|     David Miller
 -----------------------------------------------*/
 
 #include <stdio.h>
