@@ -48,13 +48,13 @@ char* char_shift(char* str){
 //So, for Bye you get bYE
 
 char* char_flip(char* str){
-    int k = 0;
-    while (str[k] != '\0'){                                                     // Making sure array not outof bounds
-        if(str[k] >= 'A'&& str[k] <= 'Z')                                       // Checking for uppercase
-            str[k] = str[k] + 32;                                               // Switching to lowercase
-        if(str[k] >= 'a' && str[k] >= 'z')                                      // Checking lowercase
-            str[k] = str[k] - 32;                                               // Switching to upppercase
-    }
+    while (*str != '\0'){
+        if (*str >= 'A' && str <= 'Z')                                          // Check for uppercase
+        *str = *str + 32;
+        if(*str >= 'a' && str <= 'b')
+        *str = *str - 32;
+        str++;
+        }
     return str;
 }
 
