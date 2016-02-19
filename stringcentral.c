@@ -15,8 +15,6 @@ char* char_flip(char* str);
 
 int main()
 {
-   
-
     return 0;
 }
 
@@ -24,8 +22,12 @@ int main()
 // Make sure to provide enough space when calling malloc().
 // For an example string What???, the result string will be WWhhaatt??????
 
+char* char_nochange(char* str){
+    return str;
+}
+
 char* char_double(char* str){
-    
+    return str;
 }
 
 // Will kind of double the string like above, but each second character is the successor of the preceeding character in the ASCII table.
@@ -33,11 +35,8 @@ char* char_double(char* str){
 
 char* char_shift(char* str){
     ch = str[100];
-    int j = 0;
-    
-    
-    
-    
+    int j = 0; 
+    return str; 
 }
 
 //will make a small letter a capital letter and vice versa
