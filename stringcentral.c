@@ -8,9 +8,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char* char_double(char* str);
-char* char_shift(char* str);
-char* char_flip(char* str);
 // definition of ptr
 char* ptr = (char*)malloc(sizeof(80));
 
